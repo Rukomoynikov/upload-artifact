@@ -8,6 +8,13 @@ export async function uploadArtifact(
   rootDirectory: string,
   options: UploadArtifactOptions
 ) {
+  console.log('Options for artifact', {
+    artifactName,
+    filesToUpload,
+    rootDirectory,
+    options
+  })
+
   const uploadResponse = await artifact.uploadArtifact(
     artifactName,
     filesToUpload,
