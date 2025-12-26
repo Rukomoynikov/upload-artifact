@@ -34,7 +34,9 @@ export async function uploadArtifact(
     files,
     rootDirectory
   )
-  console.log('zipSpecification', zipSpecification)
+
+  core.info('zipSpecification')
+  core.info(JSON.stringify(zipSpecification))
 
   if (zipSpecification.length === 0) {
     throw new FilesNotFoundError(
