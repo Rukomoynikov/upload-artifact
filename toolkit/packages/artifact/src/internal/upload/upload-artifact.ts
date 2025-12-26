@@ -34,6 +34,8 @@ export async function uploadArtifact(
     files,
     rootDirectory
   )
+  console.log('zipSpecification', zipSpecification)
+
   if (zipSpecification.length === 0) {
     throw new FilesNotFoundError(
       zipSpecification.flatMap(s => (s.sourcePath ? [s.sourcePath] : []))
