@@ -1,6 +1,8 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import artifact, {UploadArtifactOptions} from '@actions/artifact'
+import artifact, {
+  UploadArtifactOptions
+} from '../toolkit/packages/artifact/src/artifact.js'
 
 export async function uploadArtifact(
   artifactName: string,
@@ -8,6 +10,7 @@ export async function uploadArtifact(
   rootDirectory: string,
   options: UploadArtifactOptions
 ) {
+  console.log('Its working')
   console.log('Options for artifact', {
     artifactName,
     filesToUpload,

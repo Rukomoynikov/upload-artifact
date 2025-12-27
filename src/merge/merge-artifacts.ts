@@ -2,7 +2,9 @@ import * as path from 'path'
 import {mkdtemp, rm} from 'fs/promises'
 import * as core from '@actions/core'
 import {Minimatch} from 'minimatch'
-import artifactClient, {UploadArtifactOptions} from '@actions/artifact'
+import artifactClient, {
+  UploadArtifactOptions
+} from '../toolkit/packages/artifact/src/artifact.js'
 import {getInputs} from './input-helper'
 import {uploadArtifact} from '../shared/upload-artifact'
 import {findFilesToUpload} from '../shared/search'
